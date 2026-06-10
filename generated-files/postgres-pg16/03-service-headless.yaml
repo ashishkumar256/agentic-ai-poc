@@ -1,0 +1,17 @@
+# Headless service for stable DNS entries per pod (postgres-{0,1,2}.postgres-headless.middleware.svc.cluster.local)
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres-headless
+  namespace: middleware
+  labels:
+    app: postgres
+    version: "16"
+spec:
+  clusterIP: None
+  selector:
+    app: postgres
+  ports:
+    - name: postgres
+      port: 5432
+      targetPort: 5432

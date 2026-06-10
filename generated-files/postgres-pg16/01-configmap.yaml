@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: postgres-config
+  namespace: middleware
+  labels:
+    app: postgres
+    version: "16"
+data:
+  POSTGRES_DB: appdb
+  POSTGRES_USER: appuser
+  PGDATA: /var/lib/postgresql/data/pgdata

@@ -1,0 +1,9 @@
+# Namespace already exists in the cluster (managed-by: agentic-ai)
+# Included for documentation purposes
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: middleware
+  labels:
+    app.kubernetes.io/managed-by: agentic-ai
+    kubernetes.io/metadata.name: middleware
